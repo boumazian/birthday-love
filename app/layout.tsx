@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Dancing_Script, Cormorant_Garamond } from "next/font/google";
+import { birthdayContent } from "./birthday/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,8 +26,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "A Little Something For You 💌",
-  description: "A secret birthday message, sealed with love.",
+  title: birthdayContent.meta.title,
+  description: birthdayContent.meta.description,
 };
 
 export default function RootLayout({
