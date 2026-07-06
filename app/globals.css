@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff1f5;
+  --foreground: #4a2c3a;
 }
 
+/*
+  Tailwind v4 is configured in CSS, not in a `tailwind.config.js`.
+  We expose our custom fonts as theme tokens so `font-script` / `font-letter`
+  utilities are generated automatically.
+*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-script: var(--font-script);
+  --font-letter: var(--font-letter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Keyframes & animation utilities                                   */
+/*  (In Tailwind v4 these live here in CSS — there is no              */
+/*   tailwind.config.js to edit.)                                     */
+/* ------------------------------------------------------------------ */
+
+/* The envelope / card gently breathing in place */
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+/* Left teddy leaning in toward its partner */
+@keyframes nuzzle-left {
+  0%,
+  100% {
+    transform: translateX(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+/* Right teddy leaning in (mirrored) */
+@keyframes nuzzle-right {
+  0%,
+  100% {
+    transform: translateX(0) rotate(4deg) scaleX(-1);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg) scaleX(-1);
+  }
+}
+
+/* Little heart rising up between the bears, then fading */
+@keyframes heart-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.4);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-42px) scale(1.1);
+  }
+}
+
+/* Soft glow pulse on the call-to-action */
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 30px -6px rgba(244, 114, 182, 0.55);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 14px 40px -4px rgba(244, 114, 182, 0.85);
+    transform: translateY(-2px);
+  }
+}
+
+/* The letter easing open */
+@keyframes letter-in {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Envelope flap swinging open */
+@keyframes flap-open {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-172deg);
+  }
+}
+
+/* Slow drift for the ambient background hearts */
+@keyframes drift-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  15% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-90vh) rotate(28deg);
+  }
+}
+
+.animate-bob {
+  animation: bob 4s ease-in-out infinite;
+}
+.animate-nuzzle-left {
+  animation: nuzzle-left 3.2s ease-in-out infinite;
+}
+.animate-nuzzle-right {
+  animation: nuzzle-right 3.2s ease-in-out infinite;
+}
+.animate-heart-rise {
+  animation: heart-rise 2.6s ease-in-out infinite;
+}
+.animate-glow {
+  animation: glow-pulse 2.8s ease-in-out infinite;
+}
+.animate-letter-in {
+  animation: letter-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-flap-open {
+  transform-origin: top center;
+  animation: flap-open 0.7s ease-in-out 0.05s both;
+}
+.animate-drift-up {
+  animation: drift-up linear infinite;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-bob,
+  .animate-nuzzle-left,
+  .animate-nuzzle-right,
+  .animate-heart-rise,
+  .animate-glow,
+  .animate-drift-up,
+  .animate-flap-open {
+    animation: none;
+  }
 }
