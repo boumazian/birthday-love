@@ -10,7 +10,7 @@
 export const birthdayContent = {
   /** Browser tab title + meta description (used by app/layout.tsx). */
   meta: {
-    title: "A Little Something For You 💌",
+    title: "Happy Birthday Faysal ❤️",
     description: "A secret birthday message, sealed with love.",
   },
 
@@ -18,7 +18,7 @@ export const birthdayContent = {
   envelope: {
     ariaLabel: "Open your secret message",
     seal: "💌",
-    teaser: "Open your secret message...",
+    teaser: "Open your secret message, my love...",
     hint: "(tap the envelope)",
   },
 
@@ -35,15 +35,15 @@ export const birthdayContent = {
 
   /** Stage 2 — the opened letter. Body paragraphs are typewritten in order. */
   letter: {
-    greeting: "Happy Birthday,",
-    recipient: "[Your Love's Name]",
+    greeting: "My Love,",
+    recipient: "Faysal ❤️",
     paragraphs: [
-      "On the day the world became a little brighter, I just want you to know how impossibly grateful I am that it's you I get to love.",
-      "You are my favorite hello, my hardest goodbye, and every quiet, happy moment in between. Thank you for being my home.",
-      "Here's to more laughter, more adventures, and a lifetime of us — cuddled up close, just like our two little dbdoubat. 🧸💕",
+      "Faysal, I just want to tell you that I love you so much—more than you could ever imagine—and I miss you terribly! Wishing you the happiest birthday, filled with health, peace, and long life. May Allah protect your mother and siblings, help you reach every single goal and dream you hold in your heart, and compensate you with endless blessings in your life. 🤲✨",
+      "I truly want to see you at the very top, and I believe in you with all my heart... Just thinking of you brings the sweetest smile to my face. 😊💖",
+      "Lately, you've been carrying a heavy weight and going through very difficult times—I understand what you're going through, and I am right here by your side. Insha'Allah, God will reward your patience; this is just a temporary test in life. I want you to remember that I am always with you, even if we are physically far apart, my heart and mind are always right there with you. 🫂❤️",
     ],
-    signOff: "Forever yours,",
-    sender: "[Your Name]",
+    signOff: "Always yours,",
+    sender: "Abba ❤️",
     resetLabel: "seal it back up ↺",
     resetHint: "press Esc to close",
   },
