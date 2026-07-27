@@ -36,14 +36,14 @@ export const birthdayContent = {
   /** Stage 2 — the opened letter. Body paragraphs are typewritten in order. */
   letter: {
     greeting: "My Love,",
-    recipient: "Faysal ❤️",
+    recipient: "Faycal ❤️",
     paragraphs: [
       "Faysal, I just want to tell you that I love you so much—more than you could ever imagine—and I miss you terribly! Wishing you the happiest birthday, filled with health, peace, and long life. May Allah protect your mother and siblings, help you reach every single goal and dream you hold in your heart, and compensate you with endless blessings in your life. 🤲✨",
       "I truly want to see you at the very top, and I believe in you with all my heart... Just thinking of you brings the sweetest smile to my face. 😊💖",
       "Lately, you've been carrying a heavy weight and going through very difficult times—I understand what you're going through, and I am right here by your side. Insha'Allah, God will reward your patience; this is just a temporary test in life. I want you to remember that I am always with you, even if we are physically far apart, my heart and mind are always right there with you. 🫂❤️",
     ],
     signOff: "Always yours,",
-    sender: "Abba ❤️",
+    sender: "dodo dyalk ❤️",
     resetLabel: "seal it back up ↺",
     resetHint: "press Esc to close",
   },
