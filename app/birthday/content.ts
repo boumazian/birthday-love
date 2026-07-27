@@ -42,7 +42,7 @@ export const birthdayContent = {
       "I truly want to see you at the very top, and I believe in you with all my heart... Just thinking of you brings the sweetest smile to my face. 😊💖",
       "Lately, you've been carrying a heavy weight and going through very difficult times—I understand what you're going through, and I am right here by your side. Insha'Allah, God will reward your patience; this is just a temporary test in life. I want you to remember that I am always with you, even if we are physically far apart, my heart and mind are always right there with you. 🫂❤️",
     ],
-    signOff: "Always yours,",
+    signOff: ",",
     sender: "dodo dyalk ❤️",
     resetLabel: "seal it back up ↺",
     resetHint: "press Esc to close",
